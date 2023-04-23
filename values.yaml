@@ -1,0 +1,11 @@
+# COMING-SOON
+namespace: coming-soon
+replicaCount: 1
+
+TITLE: Awesome App
+PRODUCT_NAME:	My Awesome App
+CATCHY_PHRASE:	Awesome App is what you were looking for since a while.
+FACEBOOK_URL:	https://www.facebook.com/awesomeapp
+TWITTER_URL:	https://www.twitter.com/awesomeapp
+GITHUB_URL:	https://www.github.com/awesomeapp
+EMAIL:	me@mydomain.com

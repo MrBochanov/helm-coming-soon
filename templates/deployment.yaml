@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coming-soon
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: coming-soon
+  template:
+    metadata:
+      labels:
+        app: coming-soon
+    spec:
+      containers:
+        - name: coming-soon
+          image: zedtux/docker-coming-soon
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 80
+          env:
+            - name: TITLE
+              value: {{ .Values.TITLE }}
+            - name: PRODUCT_NAME
+              value: {{ .Values.PRODUCT_NAME }}
+            - name: CATCHY_PHRASE
+              value: {{ .Values.CATCHY_PHRASE }}
+            - name: FACEBOOK_URL
+              value: {{ .Values.FACEBOOK_URL }}
+            - name: TWITTER_URL
+              value: {{ .Values.TWITTER_URL }}
+            - name: GITHUB_URL
+              value: {{ .Values.GITHUB_URL }}
+            - name: EMAIL
+              value: {{ .Values.EMAIL }} 
+    
