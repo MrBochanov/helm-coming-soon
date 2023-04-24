@@ -3,10 +3,9 @@ kind: Ingress
 metadata:
   name: coming-soon-ingress
   namespace: {{ .Values.namespace }}
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+#  annotations:
+#    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  ingressClassName: nginx
   rules:
     - host: coming-soon.example.com
       http:
